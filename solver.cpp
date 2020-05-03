@@ -34,6 +34,7 @@ RealVariable &operator*(double num, RealVariable &x)
 
 RealVariable &operator^(RealVariable &x, double num)
 {
+    if(num != 2) throw runtime_error("ERR: power is not 2");
     if (x.add == NULL)
     {
         RealVariable *temp = new RealVariable(1, 0, 0);
@@ -50,6 +51,7 @@ RealVariable &operator^(RealVariable &x, double num)
 }
 RealVariable &operator/(RealVariable &x, double num)
 {
+    if(num == 0) throw runtime_error("ERR: must not divide number by 0");
     if (x.add == NULL)
     {
         double t = 1 / num;
@@ -176,6 +178,7 @@ ComplexVariable &operator*(double num, ComplexVariable &x)
 
 ComplexVariable &operator^(ComplexVariable &x, double num)
 {
+    if(num != 2) throw runtime_error("ERR: power is not 2");
     if (x.add == NULL)
     {
         ComplexVariable *temp = new ComplexVariable(1, 0);
@@ -192,6 +195,7 @@ ComplexVariable &operator^(ComplexVariable &x, double num)
 }
 ComplexVariable &operator/(ComplexVariable &x, double num)
 {
+    if(num == 0) throw runtime_error("ERR: must not divide number by 0");
     if (x.add == NULL)
     {
         double t = 1 / num;
