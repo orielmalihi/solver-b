@@ -53,22 +53,22 @@ TEST_CASE("Test")
      CHECK(solve((x^2) == 81) ==9);
      CHECK(solve((x^2) == 100) ==10); 
 
-     CHECK(solve((x^2) == 11) ==121); 
-     CHECK(solve((x^2) == 44) ==1936);
-     CHECK(solve((x^2) == 99) ==9801);
-     CHECK(solve((x^2) == 33) ==1089);
-     CHECK(solve((x^2) == 22) ==484);
-     CHECK(solve((x^2) == 55) ==3025);
-     CHECK(solve((x^2) == 66) ==4356);
-     CHECK(solve((x^2) == 77) ==5929);
-     CHECK(solve((x^2) == 88) ==7744);
-     CHECK(solve((x^2) == 111) ==12321);  
+     CHECK(solve((x^2) == 121) ==11); 
+     CHECK(solve((x^2) == 1936) ==44);
+     CHECK(solve((x^2) == 9801) ==99);
+     CHECK(solve((x^2) == 1089) ==33);
+     CHECK(solve((x^2) == 484) ==22);
+     CHECK(solve((x^2) == 3025) ==55);
+     CHECK(solve((x^2) == 4356) ==66);
+     CHECK(solve((x^2) == 5929) ==77);
+     CHECK(solve((x^2) == 7744) ==88);
+     CHECK(solve((x^2) == 12321) ==111);  
 
      CHECK(solve((x^2) + 2*x + 4.0 == 20 + 6.0*x/2 - x) ==4);   
      CHECK(solve((x^2) + 3*x + 6.0 == 12 + 6.0*x/2 - x) ==2);//16
      CHECK(solve((x^2) + 2*x + 5.0 == 27 + 3.0*x/2 - x) ==4);//29
      CHECK(solve((x^2) + 5*x + 7.0 == 18 + 5.0*x/2 - x) ==2);//21
-     CHECK(solve((x^2) + 5*x + 1.0 == 19 + 4.0*x/2 - x) ==3);//22
+     CHECK(solve((x^2) + 5*x + 1.0 == 22 + 4.0*x/2 - x) ==3);//25
      CHECK(solve((x^2) + 9*x + 3.0 == 51 + 4.0*x/2 - x) ==4);//55
      CHECK(solve((x^2) + 1*x + 1.0 == 1 + 6.0*x/2 - x) ==1);//3
      CHECK(solve((x^2) + 2*x + 8.0 == 33 + 6.0*x/2 - x) ==5);//43
@@ -111,7 +111,7 @@ TEST_CASE("Test")
 
      CHECK_THROWS(solve(0*x==20));
      CHECK_THROWS(solve(2*x-2*x == 10));
-     CHECK_THROWS(solve(x^2==-4));
+     CHECK_THROWS(solve((x^2)==-4));
      CHECK_THROWS(solve((x^2) + 1*x + 1.0 == 4 + 6.0*x/0.0 - x));
      CHECK_THROWS(solve(3*0*x==45));
      CHECK_THROWS(solve(3*x-3*x+1*x-1*x==20));
